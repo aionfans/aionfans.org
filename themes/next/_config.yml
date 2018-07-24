@@ -362,7 +362,7 @@ han: false
 # Disqus
 disqus:
   enable: false
-  shortname: 
+  shortname:
   count: true
 
 # Hypercomments
@@ -466,7 +466,7 @@ needmoreshare2:
 #google_site_verification:
 
 # Google Analytics
-google_analytics: UA-89642496-1
+google_analytics: UA-89642496-2
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
