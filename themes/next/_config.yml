@@ -363,7 +363,7 @@ han: false
 disqus:
   enable: true
   shortname: aionfans
-  count: false
+  count: true
 
 # Hypercomments
 #hypercomments_id:
