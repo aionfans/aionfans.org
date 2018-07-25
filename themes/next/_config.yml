@@ -362,7 +362,7 @@ han: false
 # Disqus
 disqus:
   enable: true
-  shortname: yifanyou
+  shortname: aionfans
   count: true
 
 # Hypercomments
