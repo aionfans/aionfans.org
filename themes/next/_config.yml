@@ -361,8 +361,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: yifanyou
   count: true
 
 # Hypercomments
