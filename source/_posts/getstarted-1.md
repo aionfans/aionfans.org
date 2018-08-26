@@ -9,21 +9,19 @@ aion节点搭建
 
 #### 安装步骤
 
-1、下载节点程序
-
-https://github.com/aionnetwork/aion/releases/download/v0.3.0/aion-v0.3.0.284fa1e-2018-08-21.tar.bz2
-
-2、解压到指定目录
-3、切换到aion目录，执行
+1.  下载节点程序  https://github.com/aionnetwork/aion/releases/download/v0.3.0/aion-v0.3.0.284fa1e-2018-08-21.tar.bz2
+2.   解压到指定目录 切换到aion目录，执行
 ./aion.sh  -a create
 提示框中输入密码 XXXX
 再次输入密码：XXXXX
 两次输入成功且一直后
 会显示账号地址，请copy出来并保存好。
-4、账号创建后，会有也关联的keystore文件产生在 aion/keystore 文件夹下
+3.   账号创建后，会有也关联的keystore文件产生在 aion/keystore 文件夹下
 keystore文件名中会包含你之前创建的账号地址。
-5、切换到aion目录，执行./aion.sh
+4.   切换到aion目录，执行./aion.sh
 程序会自动同步网络节点数据。
+
+
 
 
 aion桌面钱包
@@ -37,7 +35,7 @@ aion桌面钱包
 ```
 
 安装 Aion钱包的步骤
-1. 1、下载 https://github.com/aionnetwork/aion_ui/releases/download/v1.0.0/aion_wallet-v1.0.0.e446419e-2018-07-05.tar.bz2
+1. 下载 https://github.com/aionnetwork/aion_ui/releases/download/v1.0.0/aion_wallet-v1.0.0.e446419e-2018-07-05.tar.bz2
 2. 解压至本地目录
 3. 切换到aion_wallet 目录
 4. 运行./aion_wallet.sh文件
