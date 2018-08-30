@@ -1,3 +1,10 @@
+---
+title: aion节点
+date: 2018-08-29 20:15:26
+tags: aion节点
+category:
+- doc
+---
 aion节点搭建
 ---
 基于aion进行构建或者挖矿的第一步就是构建aion节点。然后你才能和aion的主链进行同步和交互
