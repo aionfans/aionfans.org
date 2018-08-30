@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/aion-icon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/aion-icon-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/aion-icon-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/img/aion-logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="roadmap," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Roadmap to the internet, decentralized.2018 阶段一： Kilimanjaro - 乞力马扎罗山，位于坦桑尼亚东北部，是非洲最高的山Virtual Machine - FastVM with EVM Source Compatibility虚拟机 - 兼容以太虚拟机（EVM）源码的FastVMAion FastVM is an enhanced Ether">
+<meta name="keywords" content="roadmap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AION开发路线图">
+<meta property="og:url" content="https://www.aionfans.org/2018/07/30/AION开发路线图/index.html">
+<meta property="og:site_name" content="AION Network 中文站">
+<meta property="og:description" content="Roadmap to the internet, decentralized.2018 阶段一： Kilimanjaro - 乞力马扎罗山，位于坦桑尼亚东北部，是非洲最高的山Virtual Machine - FastVM with EVM Source Compatibility虚拟机 - 兼容以太虚拟机（EVM）源码的FastVMAion FastVM is an enhanced Ether">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-30T16:33:31.942Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AION开发路线图">
+<meta name="twitter:description" content="Roadmap to the internet, decentralized.2018 阶段一： Kilimanjaro - 乞力马扎罗山，位于坦桑尼亚东北部，是非洲最高的山Virtual Machine - FastVM with EVM Source Compatibility虚拟机 - 兼容以太虚拟机（EVM）源码的FastVMAion FastVM is an enhanced Ether">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.aionfans.org/2018/07/30/AION开发路线图/"/>
+
+
+
+
+
+  <title>AION开发路线图 | AION Network 中文站</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-89642496-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="/img/aion-icon.png"
+               alt="AION Network 中文站"/>
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AION Network 中文站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.aionfans.org/2018/07/30/AION开发路线图/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aionfans.org">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AION Network 中文站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">AION开发路线图</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-30T20:15:26+08:00">
+                2018-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/doc/" itemprop="url" rel="index">
+                    <span itemprop="name">doc</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/30/AION开发路线图/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/07/30/AION开发路线图/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Roadmap-to-the-internet-decentralized"><a href="#Roadmap-to-the-internet-decentralized" class="headerlink" title="Roadmap to the internet, decentralized."></a>Roadmap to the internet, decentralized.</h3><p>2018</p>
+<h3 id="阶段一：-Kilimanjaro-乞力马扎罗山，位于坦桑尼亚东北部，是非洲最高的山"><a href="#阶段一：-Kilimanjaro-乞力马扎罗山，位于坦桑尼亚东北部，是非洲最高的山" class="headerlink" title="阶段一： Kilimanjaro - 乞力马扎罗山，位于坦桑尼亚东北部，是非洲最高的山"></a>阶段一： Kilimanjaro - 乞力马扎罗山，位于坦桑尼亚东北部，是非洲最高的山</h3><h4 id="Virtual-Machine-FastVM-with-EVM-Source-Compatibility"><a href="#Virtual-Machine-FastVM-with-EVM-Source-Compatibility" class="headerlink" title="Virtual Machine - FastVM with EVM Source Compatibility"></a>Virtual Machine - FastVM with EVM Source Compatibility</h4><h4 id="虚拟机-兼容以太虚拟机（EVM）源码的FastVM"><a href="#虚拟机-兼容以太虚拟机（EVM）源码的FastVM" class="headerlink" title="虚拟机 - 兼容以太虚拟机（EVM）源码的FastVM"></a>虚拟机 - 兼容以太虚拟机（EVM）源码的FastVM</h4><p>Aion FastVM is an enhanced Ethereum Virtual Machine (EVM), featuring 128-bit data word size for better performance. It uses LLVM JIT as execution engine and runs decentralized application at native speed. Due to the architecture change, the instruction set and the energy cost of each instruction has been optimized. In addition, solidity compiler has been updated so that it can generate code for the Aion FastVM.<br>Aion FastVM是以太虚拟机（EVM）的增强版，128位数据字节长度赋予更好的性能。使用LLVM JIT作为执行引擎，去中心化应用运行速度无损耗。架构变化带来指令集和单指令能耗的优化。另外，solidity编译器更新后，可以为Aion FastVM生成代码。</p>
+<h4 id="Aion-Interchain-Token-Bridge-and-Interchain-Communication"><a href="#Aion-Interchain-Token-Bridge-and-Interchain-Communication" class="headerlink" title="Aion Interchain - Token Bridge and Interchain Communication"></a>Aion Interchain - Token Bridge and Interchain Communication</h4><h4 id="Aion跨链-Token网桥和跨链通信"><a href="#Aion跨链-Token网桥和跨链通信" class="headerlink" title="Aion跨链 - Token网桥和跨链通信"></a>Aion跨链 - Token网桥和跨链通信</h4><p>This bridge is designed to enable the decentralized movement of smart contract based tokens between blockchains. Creating multi-network tokens that maintain a consistent supply - unleashing tokens from solely existing within one blockchain. The Token Bridge for the Kilimanjaro release is built for the purpose of migrating our ERC-20 token supply to native AION coins using a trustless interchain mechanism.<br>Token网桥的设计是为了基于tokens的智能合约在区块链之间流转。创建多网络tokens保持一致供给 - 释放单独存在于单个区块链的tokens。Kilimanjaro发行版的Token网桥的构建是为了使用不可信的跨链机制将我们的ERC-20 token供给转移给AION币。</p>
+<h4 id="Aion-Proof-of-Work-Equihash-210-9"><a href="#Aion-Proof-of-Work-Equihash-210-9" class="headerlink" title="Aion Proof of Work - Equihash 210_9"></a>Aion Proof of Work - Equihash 210_9</h4><h4 id="AION-工作量证明（POW）-Equihash210-9共识算法"><a href="#AION-工作量证明（POW）-Equihash210-9共识算法" class="headerlink" title="AION 工作量证明（POW）- Equihash210_9共识算法"></a>AION 工作量证明（POW）- Equihash210_9共识算法</h4><p>The Kilimanjaro Release utilizes an optimized equihash consensus algorithm we’ve named Equihash210_9. This is a modification to the equihash algorithm, which doubles the memory requirement while achieving the required block times.<br>Kilimanjaro发行版使用优化过的equihash共识算法，我们将其命名为Equihash210_9。修改后的equihash共识算法，在指定区块时间内完成需要两倍内存。</p>
+<h4 id="Aion-Core-Multi-Chain-Framework-Wire-Protocol-P2P-Tx-Pool-Event-Manager"><a href="#Aion-Core-Multi-Chain-Framework-Wire-Protocol-P2P-Tx-Pool-Event-Manager" class="headerlink" title="Aion Core - Multi-Chain Framework, Wire Protocol (P2P), Tx Pool, Event Manager"></a>Aion Core - Multi-Chain Framework, Wire Protocol (P2P), Tx Pool, Event Manager</h4><h4 id="Aion-Core-多链框架，通信协议（P2P），交易内存池（Tx-Pool），事件管理器"><a href="#Aion-Core-多链框架，通信协议（P2P），交易内存池（Tx-Pool），事件管理器" class="headerlink" title="Aion Core - 多链框架，通信协议（P2P），交易内存池（Tx Pool），事件管理器"></a>Aion Core - 多链框架，通信协议（P2P），交易内存池（Tx Pool），事件管理器</h4><p>Aion Core is a collection of foundational modules necessary to run the Aion blockchain. The multi-chain framework contains the foundational structure for the modules that constitute the Aion blockchain. The Aion Wire module is a peer-to-peer (P2P) communications protocol. This protocol sets the standard for how Aion nodes interface between themselves by defining communication message structures. Event Manager (RPL) is the serialization solution, encoding arrays of binary data in a structure for Aion core.<br>Aion Core是指运行Aion区块链必不可少的基础模块集合。多链框架是组成Aion区块链各模块的基础结构。Aion通信模块是一种点对点（P2P）的通信协议。通过定义通信消息结构，该协议为Aion节点接口之间的通信设定了标准。事件管理器（RPL）是序列化解决方案，用于为Aion core将二进制数据数组编码成一种结构。</p>
+<h4 id="Aion-APIs-Java-API-Web3-API-Compatibility"><a href="#Aion-APIs-Java-API-Web3-API-Compatibility" class="headerlink" title="Aion APIs - Java API, Web3 API Compatibility"></a>Aion APIs - Java API, Web3 API Compatibility</h4><h4 id="Aion-APIs-Java-接口，Web3接口兼容"><a href="#Aion-APIs-Java-接口，Web3接口兼容" class="headerlink" title="Aion APIs - Java 接口，Web3接口兼容"></a>Aion APIs - Java 接口，Web3接口兼容</h4><p>The Aion Web3 repo provides the tools for using the Aion compatible Web3 API. It contains the setup instructions, tutorial content, example use-cases and test multi-sig wallet. The API repo contains a Java implementation of the Aion blockchain kernel application programming interface, built using Java 8. It uses the ZMQ Java binding as the network transfer layer protocol for improved stability, reliability and security. This repo will also contain future API implementations.<br>Aion Web3库提供使用Aion可兼容Web3API的工具包。该工具包包含安装命令，教程，用例和测试多重签名钱包。API库包含Aion区块链内核应用编程接口的java实现，由Java8编译。它使用ZMQ Java binding作为网络传输层协议来提高稳定性，可靠性和安全性。未来，API实现也会放在这个库中。</p>
+<h3 id="阶段二-Denali-德纳里山（原名麦金莱山）位于美国阿拉斯加州的中南部，阿拉斯加山脉中段，海拔6193-米，为北美洲的第一高峰"><a href="#阶段二-Denali-德纳里山（原名麦金莱山）位于美国阿拉斯加州的中南部，阿拉斯加山脉中段，海拔6193-米，为北美洲的第一高峰" class="headerlink" title="阶段二: Denali - 德纳里山（原名麦金莱山）位于美国阿拉斯加州的中南部，阿拉斯加山脉中段，海拔6193 米，为北美洲的第一高峰"></a>阶段二: Denali - 德纳里山（原名麦金莱山）位于美国阿拉斯加州的中南部，阿拉斯加山脉中段，海拔6193 米，为北美洲的第一高峰</h3><h4 id="Aion-Virtual-Machine-AVM-Version-1"><a href="#Aion-Virtual-Machine-AVM-Version-1" class="headerlink" title="Aion Virtual Machine (AVM) Version 1"></a>Aion Virtual Machine (AVM) Version 1</h4><h4 id="Aion虚拟机V1-AVM"><a href="#Aion虚拟机V1-AVM" class="headerlink" title="Aion虚拟机V1(AVM)"></a>Aion虚拟机V1(AVM)</h4><p>This AVM is a custom-built, lightweight, performant, and stable VM that leverages key characteristics of the Java Virtual Machine (JVM), providing concurrency and robustness within a blockchain-specific context. The AVM is responsible for running applications on top of Aion. The AVM will include its own scripting language.<br>该AVM是一个定制，轻量级，高性能和稳定的虚拟机，利用Java虚拟机（JVM）的关键特性，提供在区块链环境下的并发和鲁棒性。AVM负责在Aion上面运行应用。未来将会包含它自己的脚本语言。</p>
+<h4 id="Aion-Scripting-Language"><a href="#Aion-Scripting-Language" class="headerlink" title="Aion Scripting Language"></a>Aion Scripting Language</h4><h4 id="Aion脚本语言"><a href="#Aion脚本语言" class="headerlink" title="Aion脚本语言"></a>Aion脚本语言</h4><p>The Aion scripting language is used for writing chain logic that runs on Aion-Everest and potentially any connecting/participating network. The Aion language is compiled into AVM bytecode and executed by the AVM. The Aion language provides the following features: Defensive programming, Blockchain runtime environment, Blockchain context injection, Security.<br>Aion脚本语言用于在Aion-Everest和任何参与或者连接的其他网络上编写链逻辑。该脚本语言编译成AVM二进制代码并在AVM执行。同时，它提供如下特性：防御性程序设计，区块链运行时环境，区块链上下文注入，安全。</p>
+<h4 id="Proof-of-Intelligence-Consensus-Algorithm"><a href="#Proof-of-Intelligence-Consensus-Algorithm" class="headerlink" title="Proof-of-Intelligence Consensus Algorithm"></a>Proof-of-Intelligence Consensus Algorithm</h4><h4 id="智力证明共识算法"><a href="#智力证明共识算法" class="headerlink" title="智力证明共识算法"></a>智力证明共识算法</h4><p>An economic measure to deter denial of service attacks by requiring participants, solvers in Aion-Everest, to perform artificial intelligence (AI) computation. The intent is to motivate the creation of AI-specific or specialized hardware that could be used for machine learning and neural network training in the future.<br>通过要求参与者，处理者执行人工智能计算来推迟拒绝服务攻击的一种有经济效益的措施。目的是激励去创造未来可以被用于机器学习和神经网络训练的AI硬件。</p>
+<p>2019</p>
+<h3 id="阶段三-Everest-珠穆朗玛峰（珠峰）是喜马拉雅山脉的主峰，位于中国与尼泊尔边境线上，是世界海拔最高的山峰"><a href="#阶段三-Everest-珠穆朗玛峰（珠峰）是喜马拉雅山脉的主峰，位于中国与尼泊尔边境线上，是世界海拔最高的山峰" class="headerlink" title="阶段三: Everest - 珠穆朗玛峰（珠峰）是喜马拉雅山脉的主峰，位于中国与尼泊尔边境线上，是世界海拔最高的山峰"></a>阶段三: Everest - 珠穆朗玛峰（珠峰）是喜马拉雅山脉的主峰，位于中国与尼泊尔边境线上，是世界海拔最高的山峰</h3><h4 id="Participating-Network-Bridging"><a href="#Participating-Network-Bridging" class="headerlink" title="Participating Network Bridging"></a>Participating Network Bridging</h4><h4 id="参与网络桥接"><a href="#参与网络桥接" class="headerlink" title="参与网络桥接"></a>参与网络桥接</h4><p>The generic bridge protocol is designed to enable the atomic movement of value and data between heterogeneous networks. This will enable the development of cross-blockchain contract logic and free-floating token supplies.<br>通用网桥协议的设计是为了数据的原子操作可以在多种多样的网络中执行，使得跨链合约逻辑的开发和不受约束的token供应成为可能。</p>
+<h4 id="Complete-Validator-Nomination"><a href="#Complete-Validator-Nomination" class="headerlink" title="Complete Validator Nomination"></a>Complete Validator Nomination</h4><h4 id="完成验证者提名"><a href="#完成验证者提名" class="headerlink" title="完成验证者提名"></a>完成验证者提名</h4><p>The Hybrid DPoS / PoI consensus mechanism aims to achieve high performance while providing a fair and decentralized validator set. This is achieved through a token staking system and partly through a novel verification algorithm based on concepts used in modern neural networks called Proof-of- Intelligence.<br>混合DPoS/Pol共识机制是为了当提供公平和去中心化的验证者集合时还能拥有高性能。通过一个token存储系统和部分结合一个基于存在于现代神经网络中的概念-智力证明的创新验证算法。</p>
+<h4 id="Aion-Virtual-Machine-AVM-Version-2"><a href="#Aion-Virtual-Machine-AVM-Version-2" class="headerlink" title="Aion Virtual Machine (AVM) Version 2"></a>Aion Virtual Machine (AVM) Version 2</h4><h4 id="Aion虚拟机V2-AVM"><a href="#Aion虚拟机V2-AVM" class="headerlink" title="Aion虚拟机V2(AVM)"></a>Aion虚拟机V2(AVM)</h4><p>This Virtual Machine will be an evolution of the AVM with a focus on higher performance with concurrent execution, and multiple language support.<br>这个虚拟机将会是AVM-V1的进化版，重点在于更高性能的并发执行速度，多语言支持。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/roadmap/" rel="tag"># roadmap</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/24/wellcome2aionfans/" rel="next" title="wellcome to aion fans 中文站">
+                <i class="fa fa-chevron-left"></i> wellcome to aion fans 中文站
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/15/token/" rel="prev" title="token">
+                token <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">aionfans.org</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Roadmap-to-the-internet-decentralized"><span class="nav-number">1.</span> <span class="nav-text">Roadmap to the internet, decentralized.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阶段一：-Kilimanjaro-乞力马扎罗山，位于坦桑尼亚东北部，是非洲最高的山"><span class="nav-number">2.</span> <span class="nav-text">阶段一： Kilimanjaro - 乞力马扎罗山，位于坦桑尼亚东北部，是非洲最高的山</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Virtual-Machine-FastVM-with-EVM-Source-Compatibility"><span class="nav-number">2.1.</span> <span class="nav-text">Virtual Machine - FastVM with EVM Source Compatibility</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#虚拟机-兼容以太虚拟机（EVM）源码的FastVM"><span class="nav-number">2.2.</span> <span class="nav-text">虚拟机 - 兼容以太虚拟机（EVM）源码的FastVM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion-Interchain-Token-Bridge-and-Interchain-Communication"><span class="nav-number">2.3.</span> <span class="nav-text">Aion Interchain - Token Bridge and Interchain Communication</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion跨链-Token网桥和跨链通信"><span class="nav-number">2.4.</span> <span class="nav-text">Aion跨链 - Token网桥和跨链通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion-Proof-of-Work-Equihash-210-9"><span class="nav-number">2.5.</span> <span class="nav-text">Aion Proof of Work - Equihash 210_9</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AION-工作量证明（POW）-Equihash210-9共识算法"><span class="nav-number">2.6.</span> <span class="nav-text">AION 工作量证明（POW）- Equihash210_9共识算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion-Core-Multi-Chain-Framework-Wire-Protocol-P2P-Tx-Pool-Event-Manager"><span class="nav-number">2.7.</span> <span class="nav-text">Aion Core - Multi-Chain Framework, Wire Protocol (P2P), Tx Pool, Event Manager</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion-Core-多链框架，通信协议（P2P），交易内存池（Tx-Pool），事件管理器"><span class="nav-number">2.8.</span> <span class="nav-text">Aion Core - 多链框架，通信协议（P2P），交易内存池（Tx Pool），事件管理器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion-APIs-Java-API-Web3-API-Compatibility"><span class="nav-number">2.9.</span> <span class="nav-text">Aion APIs - Java API, Web3 API Compatibility</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion-APIs-Java-接口，Web3接口兼容"><span class="nav-number">2.10.</span> <span class="nav-text">Aion APIs - Java 接口，Web3接口兼容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阶段二-Denali-德纳里山（原名麦金莱山）位于美国阿拉斯加州的中南部，阿拉斯加山脉中段，海拔6193-米，为北美洲的第一高峰"><span class="nav-number">3.</span> <span class="nav-text">阶段二: Denali - 德纳里山（原名麦金莱山）位于美国阿拉斯加州的中南部，阿拉斯加山脉中段，海拔6193 米，为北美洲的第一高峰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion-Virtual-Machine-AVM-Version-1"><span class="nav-number">3.1.</span> <span class="nav-text">Aion Virtual Machine (AVM) Version 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion虚拟机V1-AVM"><span class="nav-number">3.2.</span> <span class="nav-text">Aion虚拟机V1(AVM)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion-Scripting-Language"><span class="nav-number">3.3.</span> <span class="nav-text">Aion Scripting Language</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion脚本语言"><span class="nav-number">3.4.</span> <span class="nav-text">Aion脚本语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Proof-of-Intelligence-Consensus-Algorithm"><span class="nav-number">3.5.</span> <span class="nav-text">Proof-of-Intelligence Consensus Algorithm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#智力证明共识算法"><span class="nav-number">3.6.</span> <span class="nav-text">智力证明共识算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阶段三-Everest-珠穆朗玛峰（珠峰）是喜马拉雅山脉的主峰，位于中国与尼泊尔边境线上，是世界海拔最高的山峰"><span class="nav-number">4.</span> <span class="nav-text">阶段三: Everest - 珠穆朗玛峰（珠峰）是喜马拉雅山脉的主峰，位于中国与尼泊尔边境线上，是世界海拔最高的山峰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Participating-Network-Bridging"><span class="nav-number">4.1.</span> <span class="nav-text">Participating Network Bridging</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参与网络桥接"><span class="nav-number">4.2.</span> <span class="nav-text">参与网络桥接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Complete-Validator-Nomination"><span class="nav-number">4.3.</span> <span class="nav-text">Complete Validator Nomination</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完成验证者提名"><span class="nav-number">4.4.</span> <span class="nav-text">完成验证者提名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion-Virtual-Machine-AVM-Version-2"><span class="nav-number">4.5.</span> <span class="nav-text">Aion Virtual Machine (AVM) Version 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aion虚拟机V2-AVM"><span class="nav-number">4.6.</span> <span class="nav-text">Aion虚拟机V2(AVM)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">aionfans.org</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://aionfans.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://www.aionfans.org/2018/07/30/AION开发路线图/';
+          this.page.identifier = '2018/07/30/AION开发路线图/';
+          this.page.title = 'AION开发路线图';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://aionfans.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
